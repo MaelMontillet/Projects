@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{parskip}
+
+\lstset{rangeprefix=\#\ ,% curly left brace plus space
+                                 rangesuffix=\ \#}% space plus curly right brace
+
+
+\title{Compte rendu projet majeur}
+\author{Soren LE MEITOUR, \and Mael MONTILLET}
+\date{Octobre 2022}
+
+\begin{document}
+    \maketitle
+    \tableofcontents
+        \include{presentation.tex}
+        \bigskip
+        \include{architecture}
+        \bigskip
+        \include{strategies.tex}
+        \bigskip
+        \include{Interface.tex}
+        \section{Manuel utilisateur}
+            Afin de pouvoir lancer le jeu, il est nécessaire de telecharger tout les fichiers fournis ainsi que les images, fournies également. Celles-ci sont à ranger dans un dossier 'images' pour la bonne éxecution du code. Une fois que tout est prêt, lancer le programme via le fichier 'main.py'. Une question portant sur le choix de l'interface vous sera alors posée. Une fois ce choix fait, la partie se lance. Suivez le déroulé des tours présenté dans les points 6.2.1 pour l'interface textuelle et 6.3.1 pour l'interface graphique. Ils détaillent les choix que vous serez amenés à faire ainsi que la méthode pour les donner, en plus d'indication pour pouvoir visualiser les différentes informations relatives à la partie en cours.
+            
+            Si vous voulez lancer un nombre important de partie, il faudra augment la profondeur maximale de récursion ligne 130 de abstract\_jeu.py
+        \include{sources.tex}
+\end{document}
+    
+ 

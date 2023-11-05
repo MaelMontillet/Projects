@@ -227,7 +227,7 @@ def appel_vitesse():
     global global_button, hauteur_ecran, longueur_ecran
     enlever_bouton()
     text = fenetre.create_text(longueur_ecran*7/8, hauteur_ecran*0.4,
-                            text="Faites unlick droit pour donner le \n point de fuite (aprés avoir valider)")
+                            text="Faites un click gauche pour donner le \n point de fuite (aprés avoir valider)")
     valider=tk.Button(root, text="valider", command=previtesse)
     valider.place(y=hauteur_ecran*0.6, x=longueur_ecran*7/8)
     global_button = [text,valider]
@@ -305,7 +305,7 @@ def appel_focus():
     echelleflou.place(y=hauteur_ecran/2, x=longueur_ecran*13/16)
     rayonmax = max((width,height))
     text = fenetre.create_text(longueur_ecran*7/8, hauteur_ecran*0.35,
-                            text="Faites un click droit pour donner le centre \n et un click gauche pour donner le point \n définissant le rayon (aprés avoir validé)")
+                            text="Faites un click gauche pour donner le centre \n et un click droit pour donner le point \n définissant le rayon (aprés avoir validé)")
     valider=tk.Button(root, text="valider", command=focus_intermediaire)
     valider.place(y=hauteur_ecran*0.6, x=longueur_ecran*7/8)
     global_button = [echelleflou, valider, text]
@@ -536,7 +536,7 @@ class histogram():
             coef1=abs(p-self.plist[c][debut])/(abs(p-self.plist[c][debut])+abs(p-self.plist[c][fin]))
             coef2=abs(p-self.plist[c][fin])/(abs(p-self.plist[c][debut])+abs(p-self.plist[c][fin]))
             """ On se sert de l'intervalle trouvé pour donner une approximation de la valeur de
-            l'image ourenvoyer l'image de la borne de l'intervale la plus proche"""
+            l'image ou renvoyer l'image de la borne de l'intervalle la plus proche"""
             if mode == 'approximation':
                 self.inverse_dynamic[c][p] = self.inverse[c][self.plist[c][debut]]*coef2+self.inverse[c][self.plist[c][fin]]*coef1
             elif coef1 >coef2:
@@ -592,7 +592,7 @@ def moy(l):
 
 def contour():
     """ cree une nouvelle image avec seulement les contour de l'image de départ.
-    L'image d'arrivée est en fait la dérivée première de l'image de départ"""
+    L'image d'arrivée est en fait la "dérivée première" de l'image de départ"""
     enlever_bouton()
     for x in range(0,width):
         for y in range(0,height):
@@ -818,7 +818,7 @@ def appel_rogner():
     enlever_bouton()
     doit_rogner=True
     text = fenetre.create_text(longueur_ecran*7/8, hauteur_ecran*0.35,
-                text="Click droit : point supérieur gauche, \n click gauche : point inférieur droit")
+                text="Click gauche : point supérieur gauche, \n click droit : point inférieur droit")
     global_button=[text]
 
 def rogner():
@@ -1082,7 +1082,7 @@ def save():
     if dossier != "":
         im2.save(f'{dossier}/{nom}.jpeg','jpeg')
     else:
-        im2.save(f'images_modifies/{nom}.jpeg','jpeg')
+        im2.save(f'images_modifiees/{nom}.jpeg','jpeg')
     imgtk=ImageTk.PhotoImage(redimension(new_width,new_height))
     fenetre.im= imgtk
     fenetre.create_image(new_width*0.5,new_height*0.5,image=imgtk)

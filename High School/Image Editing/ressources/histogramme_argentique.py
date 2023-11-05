@@ -20,19 +20,19 @@ class histogram():
                 di["b"][i]=0
              
         for im in range(len(image)):
+            print(im)
             widthimage,heightimage=image[im].size
-            print(widthimage,heightimage)
+            #print(widthimage,heightimage)
             nb+=widthimage*heightimage
 
             for x in range(widthimage):
                 for y in range(heightimage):
-                    try:
-                        pixel=image[im].getpixel((x,y))
-                        di["r"][int(pixel[0])]+=1
-                        di["g"][int(pixel[1])]+=1
-                        di["b"][int(pixel[2])]+=1
-                    except:
-                        print(image[im].getpixel((x,y)))
+                    pixel=image[im].getpixel((x,y))
+                    if isinstance(pixel, tuple):
+                        pixel = pixel[0]
+                    di["r"][int(pixel)]+=1
+                    di["g"][int(pixel)]+=1
+                    di["b"][int(pixel)]+=1
             
         for i in range(256):
             di["r"][i]/=nb
@@ -97,3 +97,4 @@ histogramme_argentique.creer_inverse()
 fichier = open("histogramme_argentique.pkl", "wb")
 print(histogramme_argentique.di["r"]==histogramme_argentique.di["g"] and histogramme_argentique.di["r"]==histogramme_argentique.di["b"])
 pickle.dump(histogramme_argentique, fichier)
+fichier.close()

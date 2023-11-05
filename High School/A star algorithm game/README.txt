@@ -7,7 +7,10 @@ Un mini-jeu où un labyrinthe est généré aléatoirement, et l'utilisateur doi
 Prérequis :
 
 Python 3
-Importer les modules Pillow, pygame, matplotlib et tkinter.
+Importer les modules Pillow, pygame et tkinter.
+
+Utilisation:
+Lancez projet projetAetoile.py
 Pour jouer au jeu, il faut lancer le programme et double-cliquer pour lancer la partie.
 Vous pouvez contrôler le véhicule de gauche avec les touches z, q, s et d.
 Une animation de l'algorithme A* se déroule à droite. On y voit le graphe lié au labyrinthe, avec en bleu les nœuds accessibles dans l'état actuel de l'algorithme et en rouge les nœuds qui ont été choisis pour explorer un peu plus le graphe.
@@ -37,8 +40,10 @@ A mini-game where a maze is generated randomly, and the user must outsmart a car
 Prerequisites:
 
 Python 3
-Import the Pillow, pygame, matplotlib, and tkinter modules.
+Import the Pillow, pygame and tkinter modules.
+
 How to Play the Game:
+Run projetAetoile.py
 To play the game, you need to run the program and double-click to start the game. You can control the left vehicle using the 'z', 'q', 's', and 'd' keys. An A* algorithm animation takes place on the right. It shows the graph related to the maze, with blue nodes representing nodes accessible in the current state of the algorithm and red nodes indicating nodes selected for further exploration of the graph.
 
 

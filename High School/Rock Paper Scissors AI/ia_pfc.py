@@ -298,11 +298,11 @@ def dataset2(datalist,dataele,datan,databot,rn):
     Il y a 10 stratégies:
     un réseau de neurone qui analyse les données brutes (5 derniers coups)
     la stratégie du quadruple coup : quand l'adversaire répéte beaucoup de fois un même coup, le robot doit jouer le coup qui le contre
-    quand l'adversaire gagne, le robot doit jouer ce qui l'aurait fait perdre (il refait souvent le même coup) (strategie_delta1)
-    quand l'adversaire perd, le robot doit jouer ce qui l'aurait fait gagner ou du moins pas le même (il rejoue pas souvent le même coup) (strategie_deltam1)
+    quand l'adversaire gagne, le robot doit jouer ce qui l'aurait fait perdre (l'adversaire refait souvent le même coup) (strategie_delta1)
+    quand l'adversaire perd, le robot doit jouer ce qui l'aurait fait gagner ou du moins pas le même coup  (strategie_deltam1)
     quand il y a match nul, l'adversaire a tendence à jouer le même coup ou le coup qui l'aurait fait gagner (strategie_delta0)
     recherche de motif lié au contexte
-    fréquence de chaque coup
+    fréquence de chaque coup (si l'adversaire joue un coup avec une fréquence plus élevée, il faut jouer plus souvent le coup qui le contre)
     recherche des réactions suite aux coup du robot
     recherche des motifs de chagement de coup
     différence entre la frequence de chaque coup lors des 8 derniers coups et la fréquence de chaque coup."""

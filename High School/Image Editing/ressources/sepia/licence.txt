@@ -1,0 +1,5 @@
+s1 : public domain : https://fr.wikipedia.org/wiki/Liste_de_personnalit%C3%A9s_n%C3%A9es_%C3%A0_Strasbourg#/media/Fichier:Paul_Gustave_Dore_by_Felix_Nadar_1855-1859.jpg
+
+s2 : public domain : https://pxhere.com/no/photo/1337605
+
+s3 : public domain : https://pxhere.com/en/photo/964848

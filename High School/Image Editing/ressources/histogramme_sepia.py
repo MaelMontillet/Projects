@@ -3,7 +3,7 @@ from random import random,randint
 from math import pi,cos,sin
 import pickle
 
-imgtemoin = [Image.open(f"sepia/s{i}.jpg") for i in range(1,3)]
+imgtemoin = [Image.open(f"sepia/s{i}.jpg") for i in range(1,4)]
 
 
 class histogram():
@@ -94,5 +94,5 @@ histogramme_sepia.creer_inverse()
 fichier = open("histogramme_sepia.pkl", "wb")
 
 pickle.dump(histogramme_sepia, fichier)
-
+fichier.close()
 
